@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %} Delete Post {% endblock title %}
+
+
+{%block content%}
+
+    <h2>Delete post</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>'{{article.title}}': nomli postni rostdan ham o'chirmoqchimisiz?</p>
+        <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
+
+
+{% endblock content %}
